@@ -27,7 +27,7 @@ You should get back a `ACK <H/L>` on the serial port
 
 ## digitalWrite
 
-Syntax: `DW <pin> <H/L>`
+Syntax: `DW <pin> <H/L>`  
 Returns: `ACK`  
 
 To send a high value on pin 10: `DW 10 H`
