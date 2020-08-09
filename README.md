@@ -9,7 +9,7 @@ the gpioduino protocol is designed to be easy to implement and flexible.
 - text based
 - first `WORD` is the command
 - might contain additional arguments, space separated (for example `PIN` number on the arduino)
-- commands ends with an ASCII NULL: `\0`
+- commands ends with a semi-colon: `;`
 - server will respond with `ACK` after each command if successful, this response might contain an argument if applicable (for example a "read" command).
 - server will respond with `ERROR` in case the server had an error executing the command.
 - state handling is not automatic, your clients need to keep track of state of the server
