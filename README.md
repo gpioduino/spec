@@ -1,9 +1,9 @@
 # spec
-Specification for the gpioduino protocol
+Specification for the gpioduino serial communication protocol
 
 ## overview
 
-the gpioduino protocol is designed to be easy to implement and flexible to extend.
+the gpioduino protocol is designed to be easy to implement and flexible.
 
 - command based
 - text based
@@ -14,7 +14,10 @@ the gpioduino protocol is designed to be easy to implement and flexible to exten
 - server will respond with `ERROR` in case the server had an error executing the command.
 - state handling is not automatic, your clients need to keep track of state of the server
 - reference implementation is via serial port `@9600` bps, but spec itslef its transport agnostic.
-- no retry-ing or error checking at the protocol level, clients should handle retrying and error handling. 
+- no retry-ing or error checking at the protocol level, clients should handle retrying and error handling.
+- no board specific checking for pin modes or digital/analog capabilities its up to the user.
+
+## [Commands](COMMANDS.md)
 
 ### example "ECHO" command flow:
 
@@ -25,4 +28,3 @@ Success:
 Error:
 
 ![Error](https://raw.githubusercontent.com/gpioduino/spec/master/assets/Error.png)
-
